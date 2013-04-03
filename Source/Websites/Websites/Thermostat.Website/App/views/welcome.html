@@ -1,0 +1,65 @@
+﻿<section>
+	<div class="row">
+		<div class="span5">
+			Fan Types
+			<br />
+			<div data-bind="foreach: fanTypeCollection">
+				<input type="radio" name="fanTypes" data-bind="value: fanTypeId, checked: isChecked, click: $root.setFanType" /><span data-bind=" text: displayName"></span>
+				&nbsp; &nbsp;
+			</div>
+		</div>
+
+		<div class="span2">
+			<h2><span data-bind="text: selectedSystemType"></span></h2>
+			<br/>
+			<h2><span data-bind="text: selectedFanType"></span></h2>
+		</div>
+
+		<div class="span5">
+			System Types
+			<br />
+			<div data-bind="foreach: systemTypeCollection">
+				<input type="radio" name="systemTypes" data-bind="value: systemTypeId, checked: isChecked, click: $root.setSystemType" /><span data-bind=" text: displayName"></span>
+				&nbsp; &nbsp;
+			</div>
+		</div>
+	</div>
+
+	<br/><br/>
+
+	<div class="row">
+		<div class="span5">
+			Maximum Temp
+			<br />
+			<h2><span data-bind="text: maxSetting"></span></h2>
+		</div>
+
+		<div class="span2">
+		</div>
+
+		<div class="span5">
+			Minimum Temp
+			<br />
+			<h2><span data-bind="text: minimumSetting"></span></h2>
+		</div>
+	</div>
+
+	<br /><br />
+
+	<div class="row">
+		<div class="span5">
+			Current Temp
+			<br />
+			<h2><span data-bind="text: currentTemperature"></span></h2>
+		</div>
+
+		<div class="span2">
+		</div>
+
+		<div class="span5">
+			Hold Temp
+			<br />
+			<input type="text" data-bind="value: holdTemperature" />
+		</div>
+	</div>
+</section>
